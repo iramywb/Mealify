@@ -1,0 +1,129 @@
+@media screen and (max-width: 768px) {
+    .container {
+        padding-inline: 15px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    nav .links li {
+        padding: var(--block-gap) var(--inline-gap);
+    }
+
+    .chefs-cards .card {
+        width: calc(calc(100% - var(--gap)) / 2);
+    }
+
+    .contact .details .block {
+        flex-basis: calc(50% - var(--gap)/2);
+    }
+
+    footer .container > * {
+        width: calc(50% - var(--gap)/2);
+        flex-grow: 1;
+    }
+    footer .container .subscription {
+        order: 1;
+    }
+    footer .quick-links {
+        row-gap: 0;
+    }
+    footer .subscription-group {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* removes the overlay if screen is big */
+    nav:has(.links:target)::before {
+        display: none;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    nav .menu-icon {
+        display: none;
+    }
+
+    .mode-group {
+        margin: 0;
+    }
+
+    nav .links .closeBtn {
+        display: none;
+    }
+
+    nav .links {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        transform: translate(0);
+        transition: none;
+    }
+
+    nav .links ul {
+        --block-gap: 15px;
+        --inline-gap: 5px;
+        flex-direction: row;
+        width: auto;
+    }
+
+    nav .links ul li {
+        padding: 5px 15px;
+    }
+
+    header .container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    header .container>* {
+        width: 40%;
+    }
+
+    header {
+        min-height: 100vh;
+    }
+
+    header .btn-main {
+        --border-radius: 0 100vh 100vh;
+    }
+
+    .header-content {
+        display: block;
+        text-align: left;
+    }
+
+    .chefs-cards .card {
+        width: calc(calc(100% - var(--gap)*2) / 3);
+    }
+
+    .contact .userInfo input {
+        width: calc(50% - var(--gap)/2);
+    }
+    
+    footer .container .about,
+    footer .container .contact-details {
+        width: calc(calc(100% - var(--gap)*2)/4);
+        flex-grow: 0;
+    }
+    
+    footer .container .subscription {
+        width: calc(calc(100% - var(--gap)*2)/2);
+        order: 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* ده اخر الشاشة عندي مش هعرف اشوف الي بعد كده */
